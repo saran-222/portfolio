@@ -42,7 +42,7 @@ const UpperSection = () => {
                 </div>
                 <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
                     <div className='rounded-full bg-[#181818] w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[325px] lg:h-[325px] relative'>
-                        <Image src="/images/profile.jpg" className='rounded-full  ' layout="fill" objectFit="cover" objectPosition="center right" alt='profile Image' ></Image>
+                        <Image src="/images/saran.jpg" className='rounded-full  ' layout="fill" objectFit="cover" objectPosition="center right" alt='profile Image' ></Image>
                     </div>
                 </div>
             </div>
