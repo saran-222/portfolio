@@ -3,17 +3,18 @@ import React from 'react'
 import Image from 'next/image'
 
 import { TypeAnimation } from 'react-type-animation';
+import {motion} from "framer-motion"
 
 const UpperSection = () => {
     return (
-        <section>
+        <section className='lg:py-16'>
             {/* <div className='grid grid-cols-1 sm:grid-cols-12 md:ml-8 lg:ml-16 xl:ml-18 '>
                 <div className="col-span-7 flex flex-col justify-center  items-center sm:items-start text-center sm:text-start">
                     <h1 className='text-white font-extrabold mb-4 text-2xl lg:text-3xl xl:text-4xl '> */}
 
                 <div className='grid grid-cols-1 sm:grid-cols-12  '>
-                <div className=" col-span-7 place-self-center text-center md:text-left ">
-                    <h1 className="text-white mb-4 text-2xl  lg:text-3xl lg:leading-normal font-extrabold">         
+                <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:1.5}} className=" col-span-8 place-self-center text-center md:text-left justify-self-start">
+                    <h1 className="text-white mb-4 text-2xl  lg:text-5xl lg:leading-normal font-extrabold">         
                         <span className='text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-sky-500'>Hello, I'm {""} </span>
                         <br></br>
                         <TypeAnimation
@@ -39,12 +40,12 @@ const UpperSection = () => {
                             <span className='block bg-black  hover:bg-slate-800 rounded-full px-5 py-2'>Download CV</span>
                         </button>
                     </div>
-                </div>
-                <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
+                </motion.div>
+                <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:0.5}} className='col-span-4 place-self-center mt-4 lg:mt-0'>
                     <div className='rounded-full bg-[#181818] w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[325px] lg:h-[325px] relative'>
-                        <Image src="/images/saran.jpg" className='rounded-full  ' layout="fill" objectFit="cover" objectPosition="center right" alt='profile Image' ></Image>
+                        <Image src="/images/computer.jpg" className='rounded-full  ' layout="fill" objectFit="cover" objectPosition="center right" alt='profile Image' ></Image>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )

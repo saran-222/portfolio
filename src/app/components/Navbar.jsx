@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react'
 import NavbarLinks from './NavbarLinks'
-import { Bars3Icon, XmarkIcon } from '@heroicons/react/24/solid';
 
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
@@ -28,8 +27,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false)
 
   return (
-    <nav className='fixed top-0 left-0 right-0 z-10 bg-black bg-opacity-100'>
-      <div className='flex items-center justify-end mx-auto px-4 py-2'>
+    <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-black bg-opacity-100'>
+      <div className='flex container lg:py-4 flex-wrap items-center justify-center px-4 py-2'>
         <div className='mobile-menu block md:hidden'>
           {
             !navbarOpen ? (

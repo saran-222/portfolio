@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import React, { useTransition, useState } from 'react'
 import TabButton from './TabButton'
+import {motion} from "framer-motion"
+
 
 
 const tab_data = [
@@ -162,15 +164,15 @@ const About = () => {
     }
 
     return (
-        <section className='text-white'>
+        <section className='text-white' id='about'>
             <div className='md:grid md:grid-cols-2 gap-8  py-8 px-4 xl:gap-16 sm:py-16 xl:py-16 md:mt-20'>
                 {/* <Image src="/images/computer.jpg"  alt="aboutMe image" width={500} height={500}/> */}
-                <div className='flex justify-center items-start'>
+                <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:2}} className='flex justify-center items-start'>
                     <div className='rounded-full bg-[#181818] w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[325px] lg:h-[325px] relative '>
                         <Image src="/images/computer.jpg" className='rounded-full  object-cover' layout="fill" alt='profile Image' ></Image>
                     </div>
-                </div>
-                <div className='mt-4 md:mt-0 text-left flex flex-col h-full' >
+                </motion.div>
+                <motion.div initial={{opacity:0,scale:0.5}} animate={{opacity:1,scale:1}} transition={{duration:2}} className='mt-4 md:mt-0 text-left flex flex-col h-full' >
                     <h2 className='text-2xl font-bold text-white mb-4'>About me</h2>
                     <p className='text-[#ADB7BE] text-base sm:text-lg lg:text-xl'>
                         As a Digital Marketing Specialist at XYZ Company, I developed and executed comprehensive digital marketing strategies that increased website traffic by 40% and improved lead conversion rates by 25%.
@@ -189,7 +191,7 @@ const About = () => {
                     <div className='mt-8 '>
                         {tab_data.find((t) => t.id === tab)?.content}
                     </div>
-                </div>
+                </motion.div>
             </div>
         </section>
     )
