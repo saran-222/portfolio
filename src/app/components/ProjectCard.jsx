@@ -3,7 +3,7 @@ import { HiCodeBracket } from "react-icons/hi2";
 import { FaRegEye } from "react-icons/fa";
 import Link from 'next/link';
 
-const ProjectCard = ({ url, title, description,git,web }) => {
+const ProjectCard = ({ url, title, description, git, web }) => {
     return (
         <div>
             <div className='h-52 md:h-72 rounded-t-3xl relative group' style={{ background: `url(${url})`, backgroundSize: "cover" }}>

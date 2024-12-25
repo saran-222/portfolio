@@ -1,13 +1,12 @@
 "use client"
 import React, { useState } from 'react'
 import NavbarLinks from './NavbarLinks'
-
 import { RxHamburgerMenu } from "react-icons/rx";
 import { MdOutlineClose } from "react-icons/md";
 import MenuOverlay from './MenuOverlay';
 
-
 const navLinks = [
+
   {
     title: "About",
     path: "#about"
@@ -28,8 +27,8 @@ const Navbar = () => {
 
   return (
     <nav className='fixed mx-auto top-0 left-0 right-0 z-10 bg-black bg-opacity-100'>
-      <div className='flex container lg:py-4 flex-wrap items-center justify-center px-4 py-2'>
-        <div className='mobile-menu block md:hidden'>
+      <div className='flex container lg:py-6 flex-wrap items-center justify-center px-4 py-4'>
+        <div className='mobile-menu block md:hidden '>
           {
             !navbarOpen ? (
               <button onClick={() => setNavbarOpen(true)} className='flex items-center px-3 py-2 border rounded border-slate-200 hover:text-white hover:border-white text-slate-200'>
@@ -43,7 +42,7 @@ const Navbar = () => {
           }
         </div>
         <div className='menu hidden md:block md:w-auto id="navbar'>
-          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0'>
+          <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0 sm:text-sm lg:text-lg'>
             {
               navLinks.map((link, index) => (
                 <li key={index}>
@@ -55,7 +54,7 @@ const Navbar = () => {
         </div>
       </div>
       {
-        navbarOpen ? <MenuOverlay links={navLinks} /> : null
+        navbarOpen ? <MenuOverlay links={navLinks} setNavbarOpen={setNavbarOpen} /> : null
       }
     </nav>
   )

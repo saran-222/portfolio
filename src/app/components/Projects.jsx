@@ -29,31 +29,28 @@ const projects_data = [
         git: "/",
         web: "/"
     },
-    
 ]
 
 const Projects = () => {
 
     const ref = useRef(null)
-    const isInView = useInView(ref, { once: false })
-
+    const isInView = useInView(ref, { triggerOnce: false, threshold: 0.1 })
     const cardVariants = {
-        initial : {y:50 ,opacity:0},
-        animate : {y:0,opacity:1}
+        initial: { opacity: 0, scale: 0.5 },
+        animate: { opacity: 1, scale: 1 }
     }
 
     return (
-        <section id='projects' >
-            <h2 className='text-center text-2xl font-bold text-white mt-4 mb-8 md:mb-12'>My Projects</h2>
-            <div ref={ref} className='grid md:grid-cols-3 gap-10 md:gap-14 md:mx-20 '>
-                {projects_data.map((project,index) => 
-                    <motion.li key={index} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{duration: 1,delay:index * 0.4}}>
+        <section id='projects' className='md:mt-20' >
+            <h2 className='text-center text-2xl font-bold text-white mt-4 mb-8 md:mb-12 '>My Projects</h2>
+            <div ref={ref} className='grid md:grid-cols-3 gap-8 lg:gap-20 md:mx-5 lg:mx-10 '>
+                {projects_data.map((project) =>
+                    <motion.li key={project.id} variants={cardVariants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 2, delay: project.id * 0.4 }}>
                         <ProjectCard key={project.id} title={project.title} description={project.description} url={project.image} git={project.git} web={project.web} />
                     </motion.li>
                 )}
             </div>
         </section>
-
     )
 }
 
