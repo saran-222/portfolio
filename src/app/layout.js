@@ -9,6 +9,7 @@ const poppins = Poppins({
 
 export const metadata = {
   title: "My portfolio",
+  favicon: "/favicon.ico",
 };
 
 export default function RootLayout({ children }) {

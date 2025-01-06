@@ -15,6 +15,10 @@ const UpperSection = () => {
     initial: { opacity: 0, scale: 0.5 },
     animate: { opacity: 1, scale: 1 }
   }
+  const handleDownload = () => {
+    const pdfUrl = "/resume.pdf"
+    window.open(pdfUrl, '_blank')
+  }
 
   return (
     <section className="lg:py-12 md:mb-20" id="home">
@@ -51,7 +55,7 @@ const UpperSection = () => {
             <button onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} className="px-6 py-3 rounded-full mr-4 w-full sm:w-fit bg-gradient-to-br from-red-500 via-purple-500 to-sky-500 hover:bg-slate-200 text-white">
               Hire me
             </button>
-            <button className="px-1 py-1 rounded-full w-full sm:w-fit bg-gradient-to-br from-red-500 via-purple-500 to-sky-500 text-white mt-3">
+            <button onClick={handleDownload} className="px-1 py-1 rounded-full w-full sm:w-fit bg-gradient-to-br from-red-500 via-purple-500 to-sky-500 text-white mt-3">
               <span className="block bg-black hover:bg-slate-800 rounded-full px-5 py-2">Download CV</span>
             </button>
           </div>

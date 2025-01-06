@@ -9,7 +9,7 @@ const projects_data = [
         id: 1,
         title: "My Portfolio",
         description: "A personal portfolio website built with Next.js",
-        image: "images/projects/project1.png",
+        image: "images/projects/project3.jpg",
         git: "/",
         web: "/"
     },
@@ -17,7 +17,7 @@ const projects_data = [
         id: 2,
         title: "Project Tracker",
         description: "project management application built using the MERN stack",
-        image: "images/projects/project1.png",
+        image: "images/projects/project3.jpg",
        
     },
 ]
