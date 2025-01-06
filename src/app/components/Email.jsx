@@ -20,12 +20,17 @@ const Email = () => {
         subject: '',
         message: '',
     })
+    const [isLoading, setIsLoading] = useState(false);
+    const [statusMessage, setStatusMessage] = useState("");
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
+        
     }
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setIsLoading(true); 
+        setStatusMessage("");
         try {
             const response = await axios.post('/api/send', formData);
             if (response.data && response.data.result) {
@@ -35,11 +40,18 @@ const Email = () => {
                     subject: '',
                     message: '',
                 });
+                setStatusMessage("Message Sent Successfully!")
             } else {
                 console.log("Failed to send message");
+                setStatusMessage("Message Not Sent. Please try again.")
             }
         } catch (error) {
             console.error('Failed to add event:', error);
+        } finally {
+            setIsLoading(false); 
+            setTimeout(() => {
+                setStatusMessage("");
+            }, 3000);
         }
     };
 
@@ -70,12 +82,17 @@ const Email = () => {
                     <div className='mt-4'>
                         <button
                             type='submit'
-                            className='bg-gradient-to-br from-red-500 via-purple-500 to-sky-500 text-white font-medium py-2.5 px-5 rounded-lg w-full'
+                            className='bg-gradient-to-br from-red-500 via-purple-500 to-sky-500 text-white font-medium py-2.5 px-5 rounded-lg w-full' disabled={isLoading}
                         >
-                            Send Message
+                            {isLoading ? "Sending..." : "Send Message"}
                         </button>
                     </div>
                 </form>
+                {statusMessage && (
+                    <div className={`mt-4 text-center ${statusMessage.includes("Not Sent") ? 'text-red-500' : 'text-green-500'}`}>
+                        <p className='sm:text-sm lg:text-lg'>{statusMessage}</p>
+                    </div>
+                )}
             </motion.div>
         </section>
     )

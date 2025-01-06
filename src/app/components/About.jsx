@@ -21,7 +21,7 @@ const tab_data = [
                             { src: "/images/next.png", alt: "Next.js logo", label: "Next" },
                             { src: "/images/mongo.png", alt: "Mongo logo", label: "MongoDB" }
                         ].map((item, index) => (
-                            <li key={index} className="flex items-center text-[#ADB7BE] text-base sm:text-sm lg:text-lg hover:text-white">
+                            <li key={index} className="flex items-center text-[#ADB7BE]  sm:text-sm lg:text-lg hover:text-white">
                                 <div className="relative mr-2">
                                     <Image src={item.src} alt={item.alt} className="rounded-full" width={30} height={30} objectFit="contain" />
                                 </div>
@@ -37,7 +37,7 @@ const tab_data = [
                             { src: "/images/aws.png", alt: "Aws logo", label: "AWS" },
                             { src: "/images/sap.png", alt: "SAP logo", label: "SAP ABAP" }
                         ].map((item, index) => (
-                            <li key={index} className="flex items-center text-[#ADB7BE] text-base sm:text-sm lg:text-lg hover:text-white">
+                            <li key={index} className="flex items-center text-[#ADB7BE]  sm:text-sm lg:text-lg hover:text-white">
                                 <div className="relative mr-2">
                                     <Image src={item.src} alt={item.alt} className="rounded-full" width={30} height={30} objectFit="contain" />
                                 </div>
@@ -60,7 +60,7 @@ const tab_data = [
                     { src: "/images/book2.png", alt: "sslc logo", label: "SSLC (2016 - 2017)", percent: "95%" },
 
                 ].map((item, index) => (
-                    <li key={index} className="flex items-center justify-between text-[#ADB7BE] text-base sm:text-sm lg:text-lg hover:text-white">
+                    <li key={index} className="flex items-center justify-between text-[#ADB7BE]  sm:text-sm lg:text-lg hover:text-white">
                         <div className="flex items-center">
                             <div className="relative mr-4">
                                 <Image
@@ -88,7 +88,7 @@ const tab_data = [
                 {[
                     { src: "/images/sap.png", alt: "sap logo", label: "SAP ABAP", percent: "91%" },
                 ].map((item, index) => (
-                    <li key={index} className="flex items-center justify-between text-[#ADB7BE] text-base sm:text-sm lg:text-lg hover:text-white">
+                    <li key={index} className="flex items-center justify-between text-[#ADB7BE] sm:text-sm lg:text-lg hover:text-white">
                         <div className="flex items-center">
                             <div className="relative mr-4">
                                 <Image
