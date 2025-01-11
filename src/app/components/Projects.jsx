@@ -13,10 +13,19 @@ const projects_data = [
         git: "/",
         web: "/"
     },
+     {
+        id: 2,
+        title: "Chat Application",
+        description: "A real time chat application built with MERN stack using socket.io",
+        image: "images/projects/project3.jpg",
+        git: "/",
+        web: "/"
+    },
+
     {
         id: 2,
         title: "Project Tracker",
-        description: "project management application built using the MERN stack",
+        description: "A project management application built using the MERN stack",
         image: "images/projects/project3.jpg",
        
     },

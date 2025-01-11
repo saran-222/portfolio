@@ -133,7 +133,7 @@ const About = () => {
                 </motion.div>
                 <motion.div variants={variants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 2.5 }} className='mt-4 md:mt-0 text-left flex flex-col h-full ' >
                     <h2 className='text-2xl font-bold text-center text-white mb-4'>About me</h2>
-                    <p className='text-[#ADB7BE]  sm:text-sm lg:text-lg first-letter:ml-10'>
+                    <p className='text-[#ADB7BE]  sm:text-sm lg:text-lg '>
                         Hello 🙋‍♂️ ! I'm a self-driven developer with a passion for exploring and experimenting with new technologies. I excel at self-learning and quickly adapting to new frameworks and tools. I am committed to delivering innovative solutions and continually enhancing my skills.
                     </p>
                     <div className='flex flex-row justify-start mt-8 sm:text-lg lg:text-xl '>
