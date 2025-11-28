@@ -39,7 +39,7 @@ const UpperSection = () => {
               sequence={[
                 'Saran',
                 1000,
-                'Full Stack Developer',
+                'Software Developer',
                 1000,
                 'SAP ABAP Consultant',
                 1000,

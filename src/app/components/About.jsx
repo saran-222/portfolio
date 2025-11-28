@@ -19,7 +19,8 @@ const tab_data = [
                             { src: "/images/express.png", alt: "Express.js logo", label: "Express" },
                             { src: "/images/react.png", alt: "React.js logo", label: "React" },
                             { src: "/images/next.png", alt: "Next.js logo", label: "Next" },
-                            { src: "/images/mongo.png", alt: "Mongo logo", label: "MongoDB" }
+                            { src: "/images/mongo.png", alt: "Mongo logo", label: "MongoDB" },
+                              
                         ].map((item, index) => (
                             <li key={index} className="flex items-center text-[#ADB7BE]  sm:text-sm lg:text-lg hover:text-white">
                                 <div className="relative mr-2">
@@ -35,7 +36,10 @@ const tab_data = [
                         {[
                             { src: "/images/postgres.png", alt: "Postgres logo", label: "Postgres" },
                             { src: "/images/aws.png", alt: "Aws logo", label: "AWS" },
-                            { src: "/images/sap.png", alt: "SAP logo", label: "SAP ABAP" }
+                            { src: "/images/sap.png", alt: "SAP logo", label: "SAP ABAP" },
+                             { src: "/images/python.png", alt: "Next.js logo", label: "Python" },
+                              { src: "/images/vector.png", alt: "Next.js logo", label: "Vector DB" },
+
                         ].map((item, index) => (
                             <li key={index} className="flex items-center text-[#ADB7BE]  sm:text-sm lg:text-lg hover:text-white">
                                 <div className="relative mr-2">
@@ -124,7 +128,7 @@ const About = () => {
         animate: { opacity: 1, scale: 1 }
     }
     return (
-        <section className='text-white md:mt-20' id='about' >
+        <section className='text-white md:mt-20 ' id='about' >
             <div ref={ref} className='md:grid md:grid-cols-2 gap-8  py-8 px-4 xl:gap-16 sm:py-16 xl:py-16'>
                 <motion.div variants={variants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 1.5 }} className='flex justify-center items-start '>
                     <div className=' bg-[#181818] w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[325px] lg:h-[325px] relative '>
@@ -134,7 +138,8 @@ const About = () => {
                 <motion.div variants={variants} initial="initial" animate={isInView ? "animate" : "initial"} transition={{ duration: 2.5 }} className='mt-4 md:mt-0 text-left flex flex-col h-full ' >
                     <h2 className='text-2xl font-bold text-center text-white mb-4'>About me</h2>
                     <p className='text-[#ADB7BE]  sm:text-sm lg:text-lg '>
-                        Hello 🙋‍♂️ ! I'm a self-driven developer with a passion for exploring and experimenting with new technologies. I excel at self-learning and quickly adapting to new frameworks and tools. I am committed to delivering innovative solutions and continually enhancing my skills.
+                        {/* Hello 🙋‍♂️ ! I'm a self-driven developer with a passion for exploring and experimenting with new technologies. I excel at self-learning and quickly adapting to new frameworks and tools. I am committed to delivering innovative solutions and continually enhancing my skills. */}
+                        Hello 🙋‍♂️ ! I'm a self-driven developer who thrives on exploring new technologies, learning fast, and building modern, impactful solutions that make a difference.
                     </p>
                     <div className='flex flex-row justify-start mt-8 sm:text-lg lg:text-xl '>
                         <TabButton selectTab={() => handleTabChange("skills")} active={tab === "skills"}>

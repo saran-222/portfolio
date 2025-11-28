@@ -19,11 +19,11 @@ const ProjectCard = ({ url, title, description, git, web }) => {
                                     <HiCodeBracket className='h-8 w-8 text-[#ADB7BE] cursor-pointer hover:white absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 group-hover/link:text-white' />
                                 </Link>
                             )}
-                            {web && (
+                            {/* {web && (
                                 <Link href={web} className='h-12 w-12 border-2 relative rounded-full border-[#ADB7BE] hover:border-white group/link'>
                                     <FaRegEye className='h-8 w-8 text-[#ADB7BE] cursor-pointer hover:white absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 group-hover/link:text-white' />
                                 </Link>
-                            )}
+                            )} */}
                         </>
                     )}
 
